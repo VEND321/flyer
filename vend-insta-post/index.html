@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Glass SEO Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .card-container {
+            position: relative;
+            max-width: 500px;
+            width: 90%;
+            filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.239));
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.997);
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                inset 0 0 15px rgba(255, 255, 255, 0.5),
+                0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Visible Bubbles Inside Card */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.656);
+            z-index: 0;
+        }
+        
+        .bubble-1 {
+            width: 120px;
+            height: 120px;
+            top: -40px;
+            left: -40px;
+        }
+        
+        .bubble-2 {
+            width: 80px;
+            height: 80px;
+            bottom: -20px;
+            right: -20px;
+        }
+        
+        .bubble-3 {
+            width: 60px;
+            height: 60px;
+            top: 50%;
+            right: -15px;
+        }
+
+        /* Black & White Gradient */
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                      rgba(0,0,0,0.05) 0%, 
+                      rgba(255,255,255,0.1) 100%);
+            z-index: -1;
+        }
+
+        .card::before, .card::after {
+            content: '" "';
+            position: absolute;
+            font-size: 80px;
+            color: rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            line-height: 0;
+            z-index: 1;
+        }
+
+        .card::before {
+            top: 19px;
+            left: 35px;
+        }
+
+        .card::after {
+            bottom: 20px;
+            right: 30px;
+            transform: rotate(180deg);
+        }
+
+        .card-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card-content {
+            color: #000000;
+            line-height: 1.7;
+            font-size: 18px;
+            font-weight: 400;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <!-- Gradient Overlay -->
+            <div class="gradient-overlay"></div>
+            
+            <!-- Bubbles -->
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+            
+            <!-- Content -->
+            <h1 class="card-title">WHAT IS SEO?</h1>
+            <div class="card-content">
+                SEO (Search Engine Optimization) enhances website visibility in search engines through technical optimizations, content quality improvements, and strategic link building to increase organic traffic and rankings.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
