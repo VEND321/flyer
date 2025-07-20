@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glowing Glass SEO Card</title>
+    <title>SEO for Event Planners</title>
     <style>
         body {
             display: flex;
@@ -14,19 +14,20 @@
             font-family: 'Inter', sans-serif;
             margin: 0;
             overflow: hidden;
+            padding: 20px;
         }
 
         .card-container {
             position: relative;
             max-width: 500px;
-            width: 70%;
+            width: 100%;
             filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.239));
         }
 
         .card {
             background: rgba(255, 255, 255, 0.2);
             border-radius: 20px;
-            padding: 40px;
+            padding: 30px;
             border: 1px solid rgba(0, 0, 0, 0.997);
             backdrop-filter: blur(15px);
             position: relative;
@@ -46,22 +47,22 @@
         }
         
         .bubble-1 {
-            width: 120px;
-            height: 120px;
-            top: -40px;
-            left: -40px;
+            width: 100px;
+            height: 100px;
+            top: -30px;
+            left: -30px;
         }
         
         .bubble-2 {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             bottom: -20px;
             right: -20px;
         }
         
         .bubble-3 {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             top: 50%;
             right: -15px;
         }
@@ -82,7 +83,7 @@
         .card::before, .card::after {
             content: '" "';
             position: absolute;
-            font-size: 80px;
+            font-size: 60px;
             color: rgba(0, 0, 0, 0.1);
             font-weight: bold;
             line-height: 0;
@@ -90,18 +91,18 @@
         }
 
         .card::before {
-            top: 19px;
-            left: 35px;
+            top: 15px;
+            left: 20px;
         }
 
         .card::after {
-            bottom: 20px;
-            right: 30px;
+            bottom: 15px;
+            right: 20px;
             transform: rotate(180deg);
         }
 
         .card-title {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 800;
             color: #000;
             margin-bottom: 20px;
@@ -113,30 +114,63 @@
 
         .card-content {
             color: #000000;
-            line-height: 1.7;
-            font-size: 18px;
+            line-height: 1.6;
+            font-size: 16px;
             font-weight: 400;
             position: relative;
             z-index: 2;
+            margin-bottom: 25px;
+        }
+        
+        .bio-link {
+            text-align: center;
+            font-size: 14px;
+            color: #000;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 25px;
+            }
+            .card-title {
+                font-size: 22px;
+            }
+            .card-content {
+                font-size: 15px;
+            }
+            .bubble-1 {
+                width: 80px;
+                height: 80px;
+                top: -25px;
+                left: -25px;
+            }
+            .bubble-2 {
+                width: 60px;
+                height: 60px;
+            }
+            .card::before, .card::after {
+                font-size: 50px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="card-container">
+        <div class="gradient-overlay"></div>
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        
         <div class="card">
-            <!-- Gradient Overlay -->
-            <div class="gradient-overlay"></div>
-            
-            <!-- Bubbles -->
-            <div class="bubble bubble-1"></div>
-            <div class="bubble bubble-2"></div>
-            <div class="bubble bubble-3"></div>
-            
-            <!-- Content -->
             <h1 class="card-title">WHAT IS SEO?</h1>
             <div class="card-content">
-                SEO (Search Engine Optimization) enhances website visibility in search engines through technical optimizations, content quality improvements, and strategic link building to increase organic traffic and rankings.
+                SEO helps your event planning business show up first when clients search for services like yours. It uses strategic keywords (like "wedding planner in Lagos") to attract ideal clients without ads.
             </div>
+            <div class="bio-link">Click link in bio</div>
         </div>
     </div>
 </body>
